@@ -1,0 +1,10 @@
+<main-menu [title]="title" [routes]="menuRoutes"></main-menu>
+<div class="main-panel">
+    <header [user]="user" [options]="userOptions" ></header>
+    <div class="content container-fluid">
+        <div id="submenu" class="card breadcrumb">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -2,24 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './components/app/app.component';
+import { MainComponent } from './components/main/main.component';
 import { HomeComponent } from './components/home/home.component';
-import { UserComponent } from './components/user/user.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MainComponent,
     HomeComponent,
-    UserComponent,
+    MainMenuComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
+  exports: [],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'user', component: UserComponent },
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MainComponent]
 })
 export class AppModule { }
