@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { INavListItem } from '../../../interfaces/INavListItem'
+
+import { INavListItem } from '../../../interfaces/INavListItem';
+import { StaticValues } from '../../../assets/js/static-values';
+
+const paths = StaticValues.paths;
 
 @Component({
   selector: 'app-main',
@@ -9,13 +13,13 @@ import { INavListItem } from '../../../interfaces/INavListItem'
 export class MainComponent {
   title = "My Marketplace";
   menuRoutes: INavListItem[] = [
-    { path: "", text: "Home" },
-    { path: "my-shopping", text: "My shopping" },
-    { path: "products", text: "Products" },
+    { text: paths.home.item.text, path: paths.home.route.path },
+    { text: paths.myShopping.item.text, path: paths.myShopping.route.path },
+    { text: paths.products.item.text, path: paths.products.route.path },
   ]
   user = "Some User";
   userOptions: INavListItem[] = [
-    { path: "shopping-cart", text: "Carrinho de compras", icon: 'fas fa-shopping-cart' },
-    { path: "logout", text: "Sair", icon: 'fas fa-sign-out-alt' },
+    { text: paths.shopCart.item.text, path: paths.shopCart.route.path, icon: paths.shopCart.item.icon },
+    { text: paths.logout.item.text, path: paths.logout.route.path, icon: paths.logout.item.icon },
   ]
 }
