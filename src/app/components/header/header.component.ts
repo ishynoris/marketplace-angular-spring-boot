@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { INavListItem } from '../../../interfaces/INavListItem';
 
 @Component({
   selector: 'header',
@@ -8,6 +9,6 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
 
   @Input() user: string;
-  @Input() options: Array<{ path: string, title: string, icon?: string }>
+  @Input() options: INavListItem[]
   constructor() { }
 }

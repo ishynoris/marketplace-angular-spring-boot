@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { INavListItem } from '../../../interfaces/INavListItem';
 
 @Component({
   selector: 'main-menu',
@@ -8,6 +9,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MainMenuComponent  {
 
   @Input() title: string;
-  @Input() routes: Array<{ path: string, title: string }>
+  @Input() routes: INavListItem[];
   constructor() { }
 }

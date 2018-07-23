@@ -4,10 +4,6 @@
     <div class="logo">
       <a class="simple-text" routerLink="/">{{ title }}</a>
     </div>
-    <ul class="nav" *ngFor="let route of routes">
-      <li>
-        <a routerLink="/{{ route.path }}">{{ route.title }}</a>
-      </li>
-    </ul>
+    <app-nav-list [values]="routes"></app-nav-list>
   </div>
 </div>

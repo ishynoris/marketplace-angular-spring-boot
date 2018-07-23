@@ -4,13 +4,7 @@
         <span class="fas fa-user"></span> {{ user }} <span class="caret"></span>
     </button>
     <div class="dropdown-menu dropdown-menu-right">
-      <ul class="nav" *ngFor="let op of options">
-        <div class="dropdown-item">
-          <a routerLink="/{{ op.path }}">
-            <span class="fas fa-{{ op.icon }}"></span> {{ op.title }}
-          </a>
-        </div>
-      </ul>
+      <app-nav-list [values]="options" [textColored]="true"></app-nav-list>
     </div>
   </div>
 </nav>

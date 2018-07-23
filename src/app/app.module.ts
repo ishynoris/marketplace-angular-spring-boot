@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavListComponent } from './components/nav-list/nav-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MainMenuComponent,
     HeaderComponent,
     FooterComponent,
+    NavListComponent,
   ],
   exports: [],
   imports: [
