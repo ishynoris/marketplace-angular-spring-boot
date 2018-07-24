@@ -1,0 +1,10 @@
+<div class="product">
+  <h5>{{ product.name }}</h5>
+  <div class="center-img">
+    <img [src]="imgSrc()">
+  </div>
+  <h6>Price: R$ {{ product.price }}</h6>
+  <ul *ngFor="let desc of product.description">
+    <li>{{ desc }}</li>
+  </ul>
+</div>

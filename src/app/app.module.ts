@@ -15,6 +15,7 @@ import { MyBuysComponent } from './components/my-buys/my-buys.component';
 import { ShopCartComponent } from './components/shop-cart/shop-cart.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ButtonDropdownComponent } from './components/button-dropdown/button-dropdown.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ButtonDropdownComponent } from './components/button-dropdown/button-dro
     ShopCartComponent,
     LogoutComponent,
     ButtonDropdownComponent,
+    ProductItemComponent,
   ],
   exports: [],
   imports: [

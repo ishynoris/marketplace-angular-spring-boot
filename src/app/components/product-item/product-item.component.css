@@ -1,0 +1,23 @@
+.product {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px gray;
+    margin-bottom: 20px;
+}
+.product h5{
+    font-size: 1.3em;
+}
+.product ul{
+    margin-left: -15px;
+}
+.product img{
+    max-height: 300px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    padding-bottom: 15px;
+}
+.center-img{
+    margin: auto;
+    text-align: center;
+}
