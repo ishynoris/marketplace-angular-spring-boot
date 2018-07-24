@@ -1,7 +1,7 @@
-<ul class="nav" *ngFor="let val of values">
+<ul class="nav" *ngFor="let item of list">
   <li [ngClass]="{ 'dropdown-item' : textColored }">
-    <a routerLink="{{ val.path }}">
-        <i class="{{ val.icon }}"></i> {{ val.text }}
+    <a routerLink="{{ item.path }}">
+        <i class="{{ item.icon }}"></i> {{ item.text }}
       </a>
   </li>
 </ul>

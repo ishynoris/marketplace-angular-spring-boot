@@ -14,8 +14,8 @@ export class MainComponent {
   title = "My Marketplace";
   menuRoutes: INavListItem[] = [
     { text: paths.home.item.text, path: paths.home.route.path },
-    { text: paths.myShopping.item.text, path: paths.myShopping.route.path },
     { text: paths.products.item.text, path: paths.products.route.path },
+    { text: paths.myShopping.item.text, path: paths.myShopping.route.path },
   ]
   user = "Some User";
   userOptions: INavListItem[] = [

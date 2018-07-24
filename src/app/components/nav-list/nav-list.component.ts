@@ -8,7 +8,7 @@ import { INavListItem } from '../../../interfaces/INavListItem';
 })
 export class NavListComponent {
 
-  @Input() values: INavListItem[];
+  @Input() list: INavListItem[];
   @Input() textColored: boolean;
   constructor() { }
 
