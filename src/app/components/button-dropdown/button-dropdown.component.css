@@ -1,0 +1,7 @@
+.dropdown-item {
+    margin: 10px 0 8px 10px;
+}
+.dropdown-item a{
+    text-align: start;
+    color: tomato;
+}
