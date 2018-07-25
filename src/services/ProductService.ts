@@ -14,11 +14,13 @@ export class ProducService {
         this.behavior.getValue().push(product);
     }
 
-    removeProduct(id: number){
+    removeProduct(id: number): IProduct | undefined {
+        let removed = undefined
         this.behavior.getValue().forEach((p, i, arr) =>{
             if (p.id === id) {
-                arr.splice(i, 1);
+                removed = arr.splice(i, 1)[0];
             }
         })
+        return removed;
     }
 }

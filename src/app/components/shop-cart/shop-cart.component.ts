@@ -25,6 +25,10 @@ export class ShopCartComponent implements OnInit {
   }
 
   removeProduct(id: number){
-    this.service.removeProduct(id);
+    const removed = this.service.removeProduct(id);
+    const msg = removed === undefined 
+      ? "It was not possible remove this item."
+      : removed.name + " was removed of shop chart";
+    alert(msg);
   }
 }

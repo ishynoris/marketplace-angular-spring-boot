@@ -24,6 +24,11 @@ export class ProductsComponent implements OnInit{
     const product = this.products.find(p => {
       return p.id === id;
     });
-    this.service.addProduct(product);
+    if (product !== undefined) {
+      this.service.addProduct(product);
+      alert("Product " + product.name + " added on shop chart.")
+    } else {
+      alert("It was not possible add product on shop chart.")
+    }
   }
 }
