@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { INavListItem } from '../../../interfaces/INavListItem';
 import { ButtonDropdownComponent } from '../button-dropdown/button-dropdown.component';
+import { StaticValues } from '../../../assets/js/static-values';
 
 @Component({
   selector: 'header',
@@ -11,6 +12,6 @@ export class HeaderComponent {
 
   @Input() user: string;
   @Input() options: INavListItem[];
-  type = ButtonDropdownComponent.ButtonType.Danger;
+  type = StaticValues.ButtonType.Danger;
   constructor() { }
 }

@@ -1,3 +1,3 @@
-<button class="btn btn-primary" 
-  (click)="onClicked()">{{ text }}
+<button [ngClass]="getButtonType()" 
+  (click)="onClicked()"><span [ngClass]="icon"></span> {{ text }}
 </button>

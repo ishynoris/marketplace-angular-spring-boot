@@ -7,7 +7,24 @@ import { ShopCartComponent } from '../../app/components/shop-cart/shop-cart.comp
 import { LogoutComponent } from '../../app/components/logout/logout.component';
 import { IProduct } from '../../interfaces/IProduct';
 
+enum ButtonType { Primary, Secondary, Success, Danger, Warning, Info, Dark }
+
 export class StaticValues {
+
+    static ButtonType = ButtonType;
+
+    public static getButtonType(type: number): string {
+        return "btn btn-" + (
+          type === ButtonType.Primary ? "primary" :
+          type === ButtonType.Secondary ? "secondary" :
+          type === ButtonType.Success ? "success" :
+          type === ButtonType.Danger ? "danger" :
+          type === ButtonType.Warning ? "warning" :
+          type === ButtonType.Info ? "info" :
+          type === ButtonType.Dark ? "dark" : "light"
+        );
+      }
+
     public static paths = {
         home: { 
             item: { text: "Home" }, 

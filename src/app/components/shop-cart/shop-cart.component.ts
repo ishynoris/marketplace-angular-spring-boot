@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProducService } from '../../../services/ProductService';
 import { IProduct } from '../../../interfaces/IProduct';
+import { StaticValues } from '../../../assets/js/static-values';
 
 @Component({
   selector: 'app-shop-cart',
@@ -10,6 +11,8 @@ import { IProduct } from '../../../interfaces/IProduct';
 export class ShopCartComponent implements OnInit {
 
   private products: IProduct[]
+  btnFinish = { name: 'Finish buy', type: StaticValues.ButtonType.Success, icon: 'glyphicon glyphicon-ok' };
+  btnRemove = { name: 'Remove', type: StaticValues.ButtonType.Danger, icon: 'glyphicon glyphicon-trash' };
   constructor(private service: ProducService) { }
 
   ngOnInit() {

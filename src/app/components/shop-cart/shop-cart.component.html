@@ -6,7 +6,9 @@
     <div class="col-lg-2" *ngIf="products.length > 0;">
       <div class="btn-shop">
         <app-button
-          [text]="'Finish Buy'">
+          [icon]="btnFinish.icon"
+          [type]="btnFinish.type"
+          [text]="btnFinish.name">
         </app-button>
       </div>
     </div>
@@ -37,8 +39,10 @@
     <div class="col-lg-2">
       <div class="btn-shop">
           <app-button
-            (onClick)="removeProduct(product.id)"
-            [text]="'Remove'">
+            [type]="btnRemove.type"
+            [icon]="btnRemove.icon"
+            [text]="btnRemove.name"
+            (onClick)="removeProduct(product.id)">
           </app-button>
       </div>
     </div>

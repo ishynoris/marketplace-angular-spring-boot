@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { StaticValues } from '../../../assets/js/static-values';
 
 @Component({
   selector: 'app-button',
@@ -7,6 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ButtonComponent {
 
+  @Input() type: number;
+  @Input() icon: string;
   @Input() text: string;
   @Output() onClick = new EventEmitter();
 
@@ -16,5 +19,9 @@ export class ButtonComponent {
     if (this.onClick !== undefined){
       this.onClick.emit();
     }
+  }
+
+  getButtonType(): string{
+    return StaticValues.getButtonType(this.type);
   }
 }

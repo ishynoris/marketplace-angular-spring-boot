@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { INavListItem } from '../../../interfaces/INavListItem';
-
-enum ButtonType { Primary, Secondary, Success, Danger, Warning, Info, Dark }
+import { StaticValues } from '../../../assets/js/static-values';
 
 @Component({
   selector: 'app-button-dropdown',
@@ -10,8 +9,6 @@ enum ButtonType { Primary, Secondary, Success, Danger, Warning, Info, Dark }
   styleUrls: ['./button-dropdown.component.css']
 })
 export class ButtonDropdownComponent {
-
-  public static ButtonType = ButtonType;
   
   @Input() type: number;
   @Input() text: string;
@@ -22,14 +19,6 @@ export class ButtonDropdownComponent {
   constructor() { }
   
   getButtonType(): string {
-    return "btn-" + (
-      this.type === ButtonType.Primary ? "primary" :
-      this.type === ButtonType.Secondary ? "secondary" :
-      this.type === ButtonType.Success ? "success" :
-      this.type === ButtonType.Danger ? "danger" :
-      this.type === ButtonType.Warning ? "warning" :
-      this.type === ButtonType.Info ? "info" :
-      this.type === ButtonType.Dark ? "dark" : "light"
-    );
+    return StaticValues.getButtonType(this.type);
   }
 }
