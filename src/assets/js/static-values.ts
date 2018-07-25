@@ -22,11 +22,11 @@ export class StaticValues {
             route: { path: "products", component: ProductsComponent },
         },
         shopCart: {
-            item: { text: "Carrinho de compras", icon: "fas fa-shopping-cart" },
+            item: { text: "Carrinho de compras", icon: "glyphicon glyphicon-shopping-cart" },
             route: { path: "shop-cart", component: ShopCartComponent },
         },
         logout: {
-            item: { text: "Logout", icon: "fas fa-sign-out-alt" },
+            item: { text: "Logout", icon: "glyphicon glyphicon-off" },
             route: { path: "logout", component: LogoutComponent },
         }
     }

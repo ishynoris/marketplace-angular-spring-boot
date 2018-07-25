@@ -1,6 +1,9 @@
 <button [ngClass]="['dropdown-toggle', 'btn', getButtonType()]" data-toggle="dropdown">
-    <span class="fas fa-user"></span> {{ text }} <span class="caret"></span>
+    <span [ngClass]="icon"></span> {{ text }} <span class="caret"></span>
 </button>
 <div class="dropdown-menu dropdown-menu-right">
-  <app-nav-list [list]="itensList" [textColored]="true"></app-nav-list>
+  <app-nav-list 
+    [list]="itensList" 
+    [textColored]="true">
+  </app-nav-list>
 </div>
