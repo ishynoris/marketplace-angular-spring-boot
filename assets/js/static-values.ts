@@ -7,7 +7,24 @@ import { ShopCartComponent } from '../../app/components/shop-cart/shop-cart.comp
 import { LogoutComponent } from '../../app/components/logout/logout.component';
 import { IProduct } from '../../interfaces/IProduct';
 
+enum ButtonType { Primary, Secondary, Success, Danger, Warning, Info, Dark }
+
 export class StaticValues {
+
+    static ButtonType = ButtonType;
+
+    public static getButtonType(type: number): string {
+        return "btn btn-" + (
+          type === ButtonType.Primary ? "primary" :
+          type === ButtonType.Secondary ? "secondary" :
+          type === ButtonType.Success ? "success" :
+          type === ButtonType.Danger ? "danger" :
+          type === ButtonType.Warning ? "warning" :
+          type === ButtonType.Info ? "info" :
+          type === ButtonType.Dark ? "dark" : "light"
+        );
+      }
+
     public static paths = {
         home: { 
             item: { text: "Home" }, 
@@ -22,17 +39,18 @@ export class StaticValues {
             route: { path: "products", component: ProductsComponent },
         },
         shopCart: {
-            item: { text: "Carrinho de compras", icon: "fas fa-shopping-cart" },
+            item: { text: "Carrinho de compras", icon: "glyphicon glyphicon-shopping-cart" },
             route: { path: "shop-cart", component: ShopCartComponent },
         },
         logout: {
-            item: { text: "Logout", icon: "fas fa-sign-out-alt" },
+            item: { text: "Logout", icon: "glyphicon glyphicon-off" },
             route: { path: "logout", component: LogoutComponent },
         }
     }
 
     public static products: IProduct[] = [
         { 
+            id: 0,
             name: "Bike Speed Oggi Velloce 300",
             price: 2899.00,
             description: [ 
@@ -45,6 +63,7 @@ export class StaticValues {
             img: "bike-speed-oggi-velloce-300.png",
         },
         { 
+            id: 1,
             name: "Batman A Piada Mortal Edicao De Luxo",
             price: 34.00,
             description: [
@@ -54,6 +73,7 @@ export class StaticValues {
             img: "batman-a-piada-mortal-edicao-de-luxo.png",
         },
         { 
+            id: 2,
             name: "Relógio Technos Masculino 2115lak/1b",
             price: 159.00,
             description: [
@@ -67,6 +87,7 @@ export class StaticValues {
             img: "relogio-technos-masculino.png",
         },
         {
+            id: 3,
             name: "Smart Tv Led 32'' Hd Lg Pro 32lj601c 2 Hdmi Usb Wi-fi",
             price: 1019.90,
             description: [
@@ -79,6 +100,7 @@ export class StaticValues {
             img: "smart-tv-led-32-hd-lg-pro.png",
         },
         {
+            id: 4,
             name: "Buda Tibetano Gigante Decoração Saúde Estatua Chakras Templo",
             price: 189.90,
             description: [
@@ -89,6 +111,7 @@ export class StaticValues {
             img: "buda-tibetano-gigante-decoraco-saude-estatua-chakras-templo.png",
         },
         {
+            id: 5,
             name: "Camisa Camiseta Polo Bmw Formula 1 F1 Red Bull Corrida",
             price: 54.99,
             description: [
@@ -101,6 +124,7 @@ export class StaticValues {
             img: "camisa-camiseta-polo-bmw-formula-1-f1-red-bull-corrida.png",
         },
         {
+            id: 6,
             name: "Parafusadeira Furadeira Bivolt Cd121k50 Black Decker",
             price: 168.00,
             description: [
