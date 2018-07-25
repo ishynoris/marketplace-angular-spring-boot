@@ -7,4 +7,12 @@
   <ul *ngFor="let desc of product.description">
     <li>{{ desc }}</li>
   </ul>
+  <div class="row">
+    <div class=" btn-add-cart col-12" >
+      <app-button 
+        [text]="'Add to cart'"
+        (onClick)="addToCart(product.id)">
+      </app-button>
+    </div>
+  </div>
 </div>

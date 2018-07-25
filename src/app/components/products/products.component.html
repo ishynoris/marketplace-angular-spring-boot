@@ -1,7 +1,8 @@
 <h6 class="title">Some of our products</h6>
 <div class="row">
   <div [ngClass]="'col-md-4'" *ngFor="let product of products">
-    <app-product-item 
+    <app-product-item
+      (onAddCart)="addToCart($event)"
       [product]="product">
     </app-product-item>
   </div>

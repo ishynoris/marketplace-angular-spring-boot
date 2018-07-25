@@ -17,6 +17,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ButtonDropdownComponent } from './components/button-dropdown/button-dropdown.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { ButtonComponent } from './components/button/button.component';
+import { ProducService } from '../services/ProductService';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ButtonComponent } from './components/button/button.component';
     BrowserModule,
     RouterModule.forRoot(StaticValues.getRoutes())
   ],
-  providers: [],
+  providers: [ProducService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

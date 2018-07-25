@@ -1,3 +1,13 @@
-<p>
-  shop-cart works!
-</p>
+<div *ngIf="products.length === 0; else productList">
+  <p>No products was added on Shop Cart yet. <a routerLink="/products">Try to buy something</a>.</p>
+</div>
+
+<ng-template #productList>
+  <div *ngFor="let product of products">
+    <p>Products at Shop Cart</p>
+    <p>
+      Name: {{ product.name }}
+      Price: {{ product.price }}
+    </p>
+  </div>
+</ng-template>
