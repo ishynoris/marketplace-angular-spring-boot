@@ -1,0 +1,23 @@
+.product {
+    padding: 0 10px 0 10px;
+    margin-top: 15px;
+}
+.product img{
+    max-height: 150px;
+    max-width: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    padding: 15px;
+}
+.center-img{
+    margin: auto;
+    text-align: center;
+}
+.product ul{
+    margin-left: -15px;
+}
+.btn-shop{
+    margin-top: 10px;
+    float: right;
+}

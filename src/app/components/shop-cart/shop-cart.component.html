@@ -1,13 +1,46 @@
-<div *ngIf="products.length === 0; else productList">
-  <p>No products was added on Shop Cart yet. <a routerLink="/products">Try to buy something</a>.</p>
+<div>
+  <div class="row">
+    <div class="col-lg-10">
+      <h3 class="title">Your Shop Cart.</h3>
+    </div>
+    <div class="col-lg-2" *ngIf="products.length > 0;">
+      <div class="btn-shop">
+        <app-button
+          [text]="'Finish Buy'">
+        </app-button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div *ngIf="products.length === 0; then noProducts; else productList">
+  </div>
 </div>
 
+<ng-template #noProducts>
+  <div class="title">
+    <h6 class="title">No products was added on Shop Cart yet.</h6>
+  </div>
+  <p><a routerLink="/products">Try to buy something</a>. 
+    <span class="glyphicon glyphicon-shopping-cart"></span>
+  </p>
+</ng-template>
+
 <ng-template #productList>
-  <div *ngFor="let product of products">
-    <p>Products at Shop Cart</p>
-    <p>
-      Name: {{ product.name }}
-      Price: {{ product.price }}
-    </p>
+  <div class="product row" *ngFor="let product of products">
+    <div class="col-lg-2">
+      <img [src]="imgSrc() + product.img" >
+    </div>
+    <div class="col-lg-8">
+        <h5 class="title">{{ product.name }}</h5>
+        <h6 class="title">R$ {{ product.price }}</h6>
+    </div>
+    <div class="col-lg-2">
+      <div class="btn-shop">
+          <app-button
+            (onClick)="removeProduct(product.id)"
+            [text]="'Remove'">
+          </app-button>
+      </div>
+    </div>
   </div>
 </ng-template>
