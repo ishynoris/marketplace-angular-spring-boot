@@ -13,6 +13,7 @@ export class ShopCartComponent implements OnInit {
   private products: IProduct[]
   btnFinish = { name: 'Finish buy', type: StaticValues.ButtonType.Success, icon: 'glyphicon glyphicon-ok' };
   btnRemove = { name: 'Remove', type: StaticValues.ButtonType.Danger, icon: 'glyphicon glyphicon-trash' };
+  
   constructor(private service: ProducService) { }
 
   ngOnInit() {
@@ -21,5 +22,9 @@ export class ShopCartComponent implements OnInit {
 
   imgSrc(){
     return "assets/imgs/";
+  }
+
+  removeProduct(id: number){
+    this.service.removeProduct(id);
   }
 }
